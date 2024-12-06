@@ -1,8 +1,13 @@
-import Header from './Header.jsx'
+import Header from './Header';
+import Main from './main';
 
-function App(){
-    return (
-        <Header/>
-    );
-}
-export default App
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <Main />
+    </div>
+  );
+};
+
+export default App;
