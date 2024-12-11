@@ -1,11 +1,16 @@
-import Header from './Header';
-import Main from './main';
-
+// App.jsx
+import React from 'react';
+import RenderContent from './render';  
 const App = () => {
   return (
     <div>
-      <Header />
-      <Main />
+      <h1>Hello, my name is Gudhe Jagadeesh!</h1>
+      <RenderContent />  {
+        <div>
+        <h1>Hai this is jagadeesh</h1>
+        <p>this is rendering</p>
+    </div>
+      }
     </div>
   );
 };
