@@ -1,18 +1,22 @@
-// App.jsx
-import React from 'react';
-import RenderContent from './render';  
-const App = () => {
+import React, { useState } from 'react';
+
+function ColorPicker() {
+  const [color, setColor] = useState("#FFFFFF");
+
+  function handleColorChange(event) {
+    setColor(event.target.value);
+  }
+
   return (
-    <div>
-      <h1>Hello, my name is Gudhe Jagadeesh!</h1>
-      <RenderContent />  {
-        <div>
-        <h1>Hai this is jagadeesh</h1>
-        <p>this is rendering</p>
-    </div>
-      }
+    <div className="color-picker-container">
+      <h1>Color Picker</h1>
+      <div className="color-display" style={{ backgroundColor: color }}>
+        <p>Selected Color: {color}</p>
+      </div>
+      <label>Select a Color: </label>
+      <input type="color" value={color} onChange={handleColorChange} />
     </div>
   );
-};
+}
 
-export default App;
+export default ColorPicker;
